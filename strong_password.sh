@@ -19,7 +19,7 @@ echo " "
 for ((i=1;i<=3;i++)) #Show 3 examples
 do
     # cat /dev/urandom rolls the random dice, piped with tr to remove unwanted bytes, forcing the command to include at least 1 symbol and 1 number.  
-    # Fold wraps the lines into groups of 8. Grep fetches only lines containing at least 1 symbol. Head retrieves the password that meets these requirements.
+    # Fold wraps the lines into groups of 8. Grep fetches only lines containing at least 1 symbol and number. Head retrieves the password that meets these requirements.
     # For now, there is no check for the presence of an uppercase and a lowercase, these will be left up to chance as they have a higher probability of 26/84 to be picked
     # at each iteration of fold
     cat /dev/urandom | tr -dc 'a-zA-Z0-9-_!@#$%^&*()_+{}|:<>?=' | fold -w 8 | grep -i '[!@#$%^&*()_+{}|:<>?=]' | grep -i '[0123456789]' | head -n 1
