@@ -13,14 +13,11 @@ echo "Time to create a password. A strong password will have
 3) a symbol 
 4) be longer than 8 characters
 
-Some strong password examples could be:" 
+Some strong password examples are:" 
 echo " "
 
-
-for ((i=1;i<=3;i++)) 
+for ((i=1;i<=3;i++)) #Show 3 examples
 do
-    #tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c 8 ; 
-
     # cat /dev/urandom rolls the random dice, piped with tr to remove unwanted bytes, forcing the command to include at least 1 symbol and 1 number.  
     # Fold wraps the lines into groups of 8. Grep fetches only lines containing at least 1 symbol. Head retrieves the password that meets these requirements.
     # For now, there is no check for the presence of an uppercase and a lowercase, these will be left up to chance as they have a higher probability of 26/84 to be picked
