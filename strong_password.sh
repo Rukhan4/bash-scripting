@@ -33,7 +33,7 @@ read -p "Enter password: " PASS
 #while the password < 8 characters / it is not an empty string
 while [ ${#PASS} -le 8 ] || [ -z ${#PASS} ]
 do 
-    echo "Please at least choose a password longer than 8 characters"
+    echo "Please start with a password at least 8 characters long!"
     read -p "Enter password: " PASS # -p allows command line input while displaying the text, saving it to variable PASS
  
 done
