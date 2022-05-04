@@ -1,4 +1,4 @@
 # Projects:
 
-### 1: Strong Password
-Prompts input from the user and uses an algorithm to determine whether or not it is a strong password.
+## 1: Strong Password
+Prompts an 8 character long input from the user and uses an algorithm to determine if it is a viable password.
