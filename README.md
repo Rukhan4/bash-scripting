@@ -1,3 +1,6 @@
 # bash-scripting
 
-Contains simpler scripts used to develop my understanding of bash and the command line's functionality
+## Projects:
+
+### 1: Strong Password
+Prompts input from the user and uses an algorithm to determine whether or not it is a strong password.
